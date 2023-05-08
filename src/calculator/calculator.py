@@ -61,5 +61,5 @@ class Calculator:
                 if next_calculation != "yes":
                     break
             else:
-                self.io.write(self, "Invalid Input")
+                self.io.write("Invalid Input")
                         
