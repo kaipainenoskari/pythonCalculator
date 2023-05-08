@@ -23,7 +23,7 @@ jobs:
       - name: Install pytest
         run: pip install pytest
       - name: Run tests
-        run: poetry run coverage run --branch -m pytest src
+        run: coverage run --branch -m pytest src
       - name: Coverage report
         run: poetry run coverage xml
       - name: Coverage report to Codecov
