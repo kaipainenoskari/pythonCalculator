@@ -22,6 +22,8 @@ jobs:
         run: poetry install --no-root
       - name: Install pytest
         run: pip install pytest
+      - name: Install coverage
+        run: pip install coverage
       - name: Run tests
         run: coverage run --branch -m pytest src
       - name: Coverage report
