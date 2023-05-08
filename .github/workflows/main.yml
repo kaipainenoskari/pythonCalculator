@@ -19,6 +19,10 @@ jobs:
       - name: Install Poetry
         run: pip install poetry
       - name: Install dependencies
-        run: poetry install
+        run: poetry install --no-root
       - name: Run tests
         run: poetry run coverage run --branch -m pytest
+      - name: Coverage report
+        run: poetry run coverage xml
+      - name: Coverage report to Codecov
+        run: bash <(curl -s https://codecov.io/bash)
